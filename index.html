@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>La Pinedo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" default-src 'self' ; connect-src *; style-src 'self' data:
+        chrome-extension-resource: 'unsafe-inline' ; img-src 'self' data: chrome-extension-resource:; frame-src 'self'
+        data: chrome-extension-resource:; font-src 'self' data: chrome-extension-resource:; media-src *;>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/SocialSharing.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.clickableDiv').click(function (e) {
+                console.log($(this).attr("id"));
+                window.location.href = "./profiles/" + $(this).attr("src");
+            });
+        });
+    </script>
+</head>
+
+<body onload="domLoaded()">
+    <nav class="navbar navbar-dark bg-primary">
+        <img src="./pics/pinedoHope.jpeg" href="index.html" style="width:50px;height:50px;" alt="pinedo">
+        <a class="navbar-brand" href="index.html">La Botonedo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/costi.html">Costi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/juan.html">Juan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/mauri.html">Mauri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/kevin.html">Kevin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/guido.html">Guido</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/galo.html">Galo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/seba.html">Seba</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/wax.html">Wax</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/matu.html">Matu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profiles/nac.html">Nac</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+
+            <button onClick="otherShare()">WhatsApp</button>
+            <button onClick="otherShare2()">WhatsApp2</button>
+    </div>
+
+    <div class="container" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="row">
+            <div class="col">
+                <div class="card clickableDiv" src="costi.html" style="width: 100%;">
+                    <img class="img-thumbnail" src="./pics/costi.jpg" alt="Costi">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card clickableDiv" src="juan.html" style="width: 100%; ">
+                    <img class="img-thumbnail" src="./pics/juan.jpg" alt="Juan">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 100%; padding-top: 15px;">
+            <div class="col">
+                <div class="card clickableDiv" src="mauri.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/mauri.jpg" alt="Mauri">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card clickableDiv" src="kevin.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/kevin.jpg" height="100%" alt="Kevin">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 100%; padding-top: 15px;">
+            <div class="col">
+                <div class="card clickableDiv" src="guido.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/guido.jpg" alt="Guido">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card clickableDiv" src="galo.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/galo.jpg" height="100%" alt="Galo">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 100%; padding-top: 15px;">
+            <div class="col">
+                <div class="card clickableDiv" src="seba.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/seba.jpg" alt="Seba">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card clickableDiv" src="wax.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/wax.jpg" height="100%" alt="Wax">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 100%; padding-top: 15px;">
+            <div class="col">
+                <div class="card clickableDiv" src="matu.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/matu.jpg" height="100%" alt="Matu">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card clickableDiv" src="nac.html" style="width: 100%; height: 100%;">
+                    <img class="img-thumbnail" src="./pics/nac.jpg" alt="Nac">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

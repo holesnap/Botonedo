@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>La Pinedo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var audioElement = document.createElement('audio');
+            audioElement.addEventListener('ended', function () {
+                this.pause();
+            }, false);
+
+            $('.play').click(function () {
+                audioElement.setAttribute('src', "../audios/galo/" + $(this).attr("src"));
+                audioElement.play();
+            });
+
+            $('#restart').click(function () {
+                audioElement.currentTime = 0;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <img src="../pics/pinedoHope.jpeg" href="../index.html" style="width:50px;height:50px;" alt="pinedo">
+        <a class="navbar-brand" href="../index.html">La Botonedo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./costi.html">Costi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./juan.html">Juan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./mauri.html">Mauri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./kevin.html">Kevin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./guido.html">Guido</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Galo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./seba.html">Seba</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./wax.html">Wax</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./matu.html">Matu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nac.html">Nac</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action play" src="guardaguarda.mp3">Guarda guarda!</a>
+        <a href="#" class="list-group-item list-group-item-action play" src="acv.mp3">ACV mental... emocional!</a>
+        <a href="#" class="list-group-item list-group-item-action play" src="quincho.mp3">Quincho lleno</a>
+        <a href="#" class="list-group-item list-group-item-action play" src="norompas.mp3">No me rompas las pelotas</a>
+        <a href="#" class="list-group-item list-group-item-action play" src="necesitaba.mp3">La nena</a>
+        <a href="#" class="list-group-item list-group-item-action play" src="feminista.mp3">100% feminista</a>
+    </div>
+</body>
+
+</html>
